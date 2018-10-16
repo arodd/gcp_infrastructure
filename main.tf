@@ -19,7 +19,6 @@ provider "google" {
   region      = "${var.gcp_region}"
 }
 
-////
 //--------------------------------------------------------------------
 // Variables
 variable "compute_instance_count" {}
@@ -48,9 +47,9 @@ module "network_firewall" {
   source  = "app.terraform.io/aworkman/network-firewall/google"
   version = "0.1.5"
 
-  description = "Demo Firewall Rule - Allow TCP Port 80"
+  description = "Demo Firewall - Allow TCP 80"
   name = "allow-tcp-80"
-  network = "${module.network.self_link"
+  network = "${module.network.self_link}"
   ports = [80]
   priority = 100
   protocol = "TCP"
@@ -75,7 +74,7 @@ module "network" {
   description = "Demo Network"
   name = "demo-network"
 }
-////
+
 // Terraform outputs
 output "network_name" {
   value = "${module.network.name}"
