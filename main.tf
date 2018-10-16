@@ -55,7 +55,7 @@ module "network_firewall" {
   name = "allow-80"
   network = "${module.network.self_link}"
   ports = [80]
-  priority = 100
+  priority = 101
   protocol = "TCP"
   source_ranges = ["0.0.0.0/0"]
 }
