@@ -44,7 +44,7 @@ module "compute_instance" {
   disk_size = "${var.compute_instance_disk_size}"
   machine_type = "${var.compute_instance_machine_type}"
   name_prefix = "aworkman-demo"
-  subnetwork = "${module.network.self_link}"
+  subnetwork = "${module.network_subnet.self_link}"
 }
 
 module "network_firewall" {
