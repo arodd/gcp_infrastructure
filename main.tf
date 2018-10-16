@@ -43,7 +43,7 @@ module "compute_instance" {
   disk_image = "${var.compute_instance_disk_image}"
   disk_size = "${var.compute_instance_disk_size}"
   machine_type = "${var.compute_instance_machine_type}"
-  name_prefix = "demo"
+  name_prefix = "aworkman-demo"
   subnetwork = "${module.network.self_link}"
 }
 
