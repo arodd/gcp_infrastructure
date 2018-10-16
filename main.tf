@@ -51,7 +51,7 @@ module "network_firewall" {
   source  = "app.terraform.io/aworkman/network-firewall/google"
   version = "0.1.5"
 
-  description = "Demo Firewall Rule - Port 80"
+  description = "Demo Firewall Rule - Port80"
   name = "allow-80"
   network = "${module.network.self_link}"
   ports = 80
