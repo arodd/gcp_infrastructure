@@ -9,7 +9,7 @@ variable "gcp_project" {
 
 variable "gcp_region" {
  description = "GCP region"
- default = "us-east1"
+ default = "us-central1"
 }
 
 // Google Provider Configuration
