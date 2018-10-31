@@ -20,7 +20,6 @@ provider "google" {
 }
 
 //--------------------------------------------------------------------
-
 //--------------------------------------------------------------------
 // Variables
 variable "compute_instance_count" {}
@@ -50,7 +49,7 @@ module "network_firewall" {
   version = "0.1.5"
 
   description = "Demo Firewall Rule - Allow TCP 80"
-  name = "allow-tcp-80"
+  name = "allow-80"
   network = "${module.network.self_link}"
   ports = [80]
   priority = 100
