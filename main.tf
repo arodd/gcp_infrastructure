@@ -25,7 +25,6 @@ provider "google" {
 // Variables
 variable "compute_instance_disk_image" {}
 variable "compute_instance_disk_size" {}
-variable "compute_instance_machine_type" {}
 
 
 
@@ -39,7 +38,7 @@ module "compute_instance" {
   count = "1"
   disk_image = "${var.compute_instance_disk_image}"
   disk_size = "${var.compute_instance_disk_size}"
-  machine_type = "${var.compute_instance_machine_type}"
+  machine_type = "n1-standard-1"
   name_prefix = "aworkman-demo"
   subnetwork = "${module.network_subnet.self_link}"
 }
