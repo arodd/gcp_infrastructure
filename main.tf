@@ -23,7 +23,6 @@ provider "google" {
 //--------------------------------------------------------------------
 //--------------------------------------------------------------------
 // Variables
-variable "compute_instance_count" {}
 variable "compute_instance_disk_image" {}
 variable "compute_instance_disk_size" {}
 variable "compute_instance_machine_type" {}
@@ -37,7 +36,7 @@ module "compute_instance" {
   source  = "app.terraform.io/aworkman/compute-instance/google"
   version = "0.1.4"
 
-  count = "${var.compute_instance_count}"
+  count = "1"
   disk_image = "${var.compute_instance_disk_image}"
   disk_size = "${var.compute_instance_disk_size}"
   machine_type = "${var.compute_instance_machine_type}"
